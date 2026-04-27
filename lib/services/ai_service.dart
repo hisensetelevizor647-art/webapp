@@ -227,8 +227,8 @@ class AiService extends ChangeNotifier {
 
   String _placeholderImageUrl(String prompt) {
     final int seed = prompt.hashCode.abs() % 1000;
-    final int w = 768;
-    final int h = 768;
+    const int w = 768;
+    const int h = 768;
     // Public Picsum stand-in keeps the stub offline-safe on real devices with
     // a network connection. Returns a deterministic image per prompt.
     return 'https://picsum.photos/seed/$seed/${math.min(w, 1024)}/${math.min(h, 1024)}';

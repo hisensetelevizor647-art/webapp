@@ -149,7 +149,7 @@ class _TypingIndicatorState extends State<_TypingIndicator>
                 final double t = ((_c.value + i * 0.15) % 1.0);
                 final double scale = 0.6 + (0.4 * (1 - (t - 0.5).abs() * 2));
                 return Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 3),
+                  padding: const EdgeInsets.symmetric(horizontal: 3),
                   child: Transform.scale(
                     scale: scale,
                     child: Container(
