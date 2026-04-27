@@ -58,6 +58,10 @@ class ScreenshotActivity : Activity() {
         try {
             val projection: MediaProjection =
                 projectionManager.getMediaProjection(resultCode, data)
+                    ?: run {
+                        finishWith(null)
+                        return
+                    }
 
             val metrics = DisplayMetrics()
             (getSystemService(Context.WINDOW_SERVICE) as WindowManager)
